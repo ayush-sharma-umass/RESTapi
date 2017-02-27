@@ -1,0 +1,22 @@
+{
+  "name": "cisco",
+  "version": "1.0.0",
+  "description": "\" a simple restful API app\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"cisco\""
+  ],
+  "dependencies":{
+      "express":"*",
+      "body-parser":"*",
+      "mongoose":"*"
+  },
+  "engines": {
+      "node": "4.1.1"
+  }
+  "author": "Ayush Sharma",
+  "license": "ISC"
+}
