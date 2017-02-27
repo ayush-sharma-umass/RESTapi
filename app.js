@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var errorHandler = require('./errorHandler/errorHandler')
 
 // Connect to mongoose database
 mongoose.connect('mongodb://localhost/cisco');
@@ -11,14 +12,13 @@ var db = mongoose.connection;
 // Initialize body parser
 app.use(bodyParser.json());
 
-
 // Import the routing files
 var itemRouter = require('./routers/itemRouter.js');
 app.use('/api',  itemRouter);
 
 // Default uri
 app.get('/', function(req, res){
-    res.send('Please use /api/items');
+    res = errorHandler.redirect(res);
 });
 
 
