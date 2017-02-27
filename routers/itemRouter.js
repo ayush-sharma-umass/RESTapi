@@ -48,7 +48,7 @@ router.post('/items', function(req, response) {
 
 router.put('/items/:_id', function(req, response) {
     if (isJsonString(req.body)) {
-        response = errorHandler.invalidJSONStringPOST(response);
+        response = errorHandler.invalidJSONStringPUT(response);
     }
     else {
         var id = req.params._id;
